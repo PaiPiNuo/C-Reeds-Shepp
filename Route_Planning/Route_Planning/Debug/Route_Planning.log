@@ -1,0 +1,52 @@
+﻿  R_Shepp.cpp
+f:\10reedsshepp\route_planning\route_planning\r_shepp.h(14): warning C4091: “typedef ”: 没有声明变量时忽略“PATH”的左侧
+f:\10reedsshepp\route_planning\route_planning\r_shepp.h(22): warning C4091: “typedef ”: 没有声明变量时忽略“pathLength”的左侧
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(10): warning C4305: “初始化”: 从“int”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(25): warning C4018: “<”: 有符号/无符号不匹配
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(37): warning C4305: “初始化”: 从“int”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(196): warning C4305: “初始化”: 从“int”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(357): warning C4305: “初始化”: 从“int”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(513): warning C4305: “初始化”: 从“int”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(536): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(553): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(570): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(587): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(604): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(621): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(638): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(655): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(676): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(693): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(710): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(727): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(744): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(761): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(778): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(795): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(808): warning C4305: “初始化”: 从“int”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(831): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(833): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(849): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(851): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(866): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(868): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(883): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(885): warning C4305: “=”: 从“double”到“float”截断
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(918): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(937): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(999): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(1000): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(1021): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(1064): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(1066): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(1068): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+f:\10reedsshepp\route_planning\route_planning\r_shepp.cpp(1078): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码...
+  正在编译...
+  main.cpp
+f:\10reedsshepp\route_planning\route_planning\r_shepp.h(14): warning C4091: “typedef ”: 没有声明变量时忽略“PATH”的左侧
+f:\10reedsshepp\route_planning\route_planning\r_shepp.h(22): warning C4091: “typedef ”: 没有声明变量时忽略“pathLength”的左侧
+f:\10reedsshepp\route_planning\route_planning\main.cpp(10): warning C4305: “初始化”: 从“double”到“float”截断
+  正在生成代码...
+  Route_Planning.vcxproj -> F:\10ReedsShepp\Route_Planning\Debug\Route_Planning.exe
+  Route_Planning.vcxproj -> F:\10ReedsShepp\Route_Planning\Debug\Route_Planning.pdb (Full PDB)

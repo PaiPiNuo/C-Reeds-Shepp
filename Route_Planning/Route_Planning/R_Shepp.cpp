@@ -4,8 +4,6 @@
 #include "main.h"
 using namespace std;
 
-
-
 PATH  FindRSPath(float x, float y, float phi) {
 	float Lmin = INF;
 	x = x / rmin;
@@ -14,13 +12,13 @@ PATH  FindRSPath(float x, float y, float phi) {
 	PATH path_CSC= CSC(x, y, phi);
 	PATH path_CCC = CCC(x, y, phi);
 	PATH path_CCCC = CCCC(x, y, phi);
-	PATH path_CCSC = CCSC(x, y, phi);
-	PATH path_CCSCC = CCSCC(x, y, phi);
+	//PATH path_CCSC = CCSC(x, y, phi);
+	//PATH path_CCSCC = CCSCC(x, y, phi);
 	path.push_back(path_CSC);
 	path.push_back(path_CCC);
 	path.push_back(path_CCCC);
-	path.push_back(path_CCSC);
-	path.push_back(path_CCSCC);
+	//path.push_back(path_CCSC);
+	//path.push_back(path_CCSCC);
 	int ind_Record = 0;
 	for (int i = 0; i < path.size();i++) {
 		if (true==path[i].isok) {
@@ -192,6 +190,7 @@ PATH CSC(float x, float y, float phi) {
 	tmpPath.total_Len = abs(tmpPath.t)+ abs(tmpPath.u)+ abs(tmpPath.v)+ abs(tmpPath.w)+ abs(tmpPath.x);
 	return tmpPath;
 }
+
 PATH CCC(float x, float y, float phi) {
 	float Lmin = INF, L;
 	PATH tmpPath;
@@ -312,7 +311,7 @@ PATH CCC(float x, float y, float phi) {
 			tmpPath.x = 0;
 		}
 	}
-	pLength = LpRmL(-xb, yb, -phi);//reflect
+	pLength = LpRmL(xb, -yb, -phi);//reflect
 	if (pLength.isok) {
 		L = abs(pLength.t) + abs(pLength.u) + abs(pLength.v);
 		if (Lmin > L) {
@@ -329,7 +328,7 @@ PATH CCC(float x, float y, float phi) {
 			tmpPath.x = 0;
 		}
 	}
-	pLength = LpRmL(-xb, yb, -phi);//reflect+timeflip
+	pLength = LpRmL(-xb, -yb, phi);//reflect+timeflip
 	if (pLength.isok) {
 		L = abs(pLength.t) + abs(pLength.u) + abs(pLength.v);
 		if (Lmin > L) {
@@ -353,6 +352,7 @@ PATH CCC(float x, float y, float phi) {
 	tmpPath.total_Len = abs(tmpPath.t) + abs(tmpPath.u) + abs(tmpPath.v) + abs(tmpPath.w) + abs(tmpPath.x);
 	return tmpPath;
 }
+
 PATH CCCC(float x, float y, float phi) {
 	float Lmin = INF, L;
 	PATH tmpPath;
@@ -434,6 +434,7 @@ PATH CCCC(float x, float y, float phi) {
 			tmpPath.x = 0;
 		}
 	}
+	
 	pLength = LpRumLumRp(-x, -y, phi);
 	if (pLength.isok) {
 		L = abs(pLength.t) + 2 * abs(pLength.u) + abs(pLength.v);
@@ -893,10 +894,13 @@ PATH CCSCC(float x, float y, float phi) {
 	tmpPath.total_Len = abs(tmpPath.t) + abs(tmpPath.u) + abs(tmpPath.v) + abs(tmpPath.w) + abs(tmpPath.x);
 	return tmpPath;
 }
-//L+S+L+
+//L+S+L+ formula 8.1
 pathLength LpSpLp(float x, float y, float phi) {
 	pathLength pathLen;
-	cart2pol(x - sinf(phi), y - 1 + cosf(phi), pathLen.u, pathLen.t);
+	float theta, uLen;
+	cart2pol(x - sinf(phi), y - 1 + cosf(phi), uLen, theta);
+	pathLen.t = theta;
+	pathLen.u = uLen;
 	if (pathLen.t >= 0) {
 		pathLen.v = mod2pi(phi - pathLen.t);
 		if (pathLen.v >= 0) {
@@ -910,12 +914,15 @@ pathLength LpSpLp(float x, float y, float phi) {
 	pathLen.v = 0;
 	return pathLen;
 }
+//formula 8.2
 pathLength LpSpRp(float x, float y, float phi) {
 	pathLength pathLen;
-	cart2pol(x + sin(phi), y - 1 - cos(phi), pathLen.u, pathLen.t);
-	if (pathLen.u*pathLen.u>=4) {
-		pathLen.u = sqrt(pathLen.u*pathLen.u - 4);
-		pathLen.t = mod2pi(pathLen.t+atan2(2, pathLen.u));
+	float theta1, u1,tmpTheta;
+	cart2pol(x + sin(phi), y - 1 - cos(phi), u1, theta1);
+	if (u1*u1>=4) {
+		pathLen.u = sqrt(u1*u1 - 4);
+		tmpTheta= atan2(2, pathLen.u);	
+		pathLen.t = mod2pi(theta1 + tmpTheta);
 		pathLen.v = mod2pi(pathLen.t- phi);
 		if (pathLen.t>=0&& pathLen.v>=0) {
 			pathLen.isok = true;
@@ -928,6 +935,7 @@ pathLength LpSpRp(float x, float y, float phi) {
 	pathLen.v = 0;
 	return pathLen;
 }
+//L+R-L+  and  L+R-L-     formula 8.3/8.4
 pathLength LpRmL(float x, float y, float phi) {
 	pathLength pathLen;
 	float u,theta;

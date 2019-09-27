@@ -14,11 +14,13 @@ typedef struct PATH {
 };
 
 typedef struct pathLength {
-	float t;
-	float u;
-	float v;
-	float w;
-	bool isok;
+	float t=0;
+	float u=0;
+	float v=0;
+	float w=0;
+	float x=0;
+	bool isok=false;
+
 };
 
 
